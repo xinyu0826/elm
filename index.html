@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="js/public.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+    
+
+    <title>饿了么</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 顶部 -->
+        <div class="indextop">
+
+            <div class="topOne">
+
+                <!-- 左边 -->
+                <div class="leftO">
+                    <img src="images/dingwei.png">
+                    <span>新世纪大厦</span>
+                    <button><img src="images/xia.png"></button>
+                </div>
+
+                <!-- 右边 -->
+                <div class="rightO">
+                    <div class="leO">
+                        <a href="javascript:">
+                            <img src="images/saoma.png">
+                            <span>扫码</span>
+                        </a>
+                    </div>
+                    <div class="rigO">
+                        <img src="images/YY-wendu.png">
+                        <span>38</span>
+                        <img src="images/sheshidu.png" style="height:0.17rem;">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 搜索 -->
+            <div class="sou">
+                <img src="images/sousuo.png">
+                <input type="text" placeholder="输入商家，商品名称">
+            </div>
+
+        </div>
+
+        <!-- 轮播图 -->
+        <div class="lunbo">
+            <mt-swipe>
+                <mt-swipe-item><a href="javascript:"><img src="images/lunbotu1.webp"></a></mt-swipe-item>
+                <mt-swipe-item><a href="javascript:"><img src="images/lunbotu3.webp"></a></mt-swipe-item>
+                <mt-swipe-item><a href="javascript:"><img src="images/lunbotu4.webp"></a></mt-swipe-item>
+            </mt-swipe>
+        </div>
+
+        <!-- 列表图 -->
+        <div class="listTu">
+            <mt-swipe :auto="0">
+                <mt-swipe-item>
+                    <ul>
+                        <li><a href="javascript:"><img src="images/1.webp"><span>美食</span></a></li>
+                        <li><a href="javascript:"><img src="images/1.webp"><span>卖场便利</span></a></li>
+                        <li><a href="javascript:"><img src="images/1.webp"><span>水果</span></a></li>
+                        <li><a href="javascript:"><img src="images/1.webp"><span>甜品饮品</span></a></li>
+                        <li><a href="javascript:"><img src="images/1.webp"><span>送药上门</span></a></li>
+                        <li><a href="javascript:"><img src="images/1.webp"><span>新店尝鲜</span></a></li>
+                        <li><a href="javascript:"><img src="images/1.webp"><span>热门下午茶</span></a></li>
+                        <li><a href="javascript:"><img src="images/1.webp"><span>速食简餐</span></a></li>
+                        <li><a href="javascript:"><img src="images/1.webp"><span>汉堡披萨</span></a></li>
+                        <li><a href="javascript:"><img src="images/1.webp"><span>米粉面馆</span></a></li>
+                    </ul>
+                </mt-swipe-item>
+                <mt-swipe-item>
+                        <ul>
+                            <li><a href="javascript:"><img src="images/1.webp"><span>美食</span></a></li>
+                            <li><a href="javascript:"><img src="images/1.webp"><span>卖场便利</span></a></li>
+                            <li><a href="javascript:"><img src="images/1.webp"><span>水果</span></a></li>
+                            <li><a href="javascript:"><img src="images/1.webp"><span>甜品饮品</span></a></li>
+                            <li><a href="javascript:"><img src="images/1.webp"><span>送药上门</span></a></li>
+                            <li><a href="javascript:"><img src="images/1.webp"><span>新店尝鲜</span></a></li>
+                        </ul>
+                </mt-swipe-item>
+            </mt-swipe>
+        </div>
+
+        <!-- 电影酒店火车票 -->
+        <div class="classification">
+
+            <div>
+                <a href="javascript:">
+                    <h2>电影</h2>
+                    <span>蜘蛛侠Ⅱ</span>
+                    <img src="images/01.webp">
+                </a>
+            </div>
+
+            <div>
+                <a href="javascript:">
+                    <h2>酒店</h2>
+                    <span>专享特价</span>
+                    <img src="images/01.webp">
+                </a>
+            </div>
+
+            <div>
+                <a href="javascript:">
+                    <h2>火车票</h2>
+                    <span>便捷出行</span>
+                    <img src="images/01.webp">
+                </a>
+            </div>
+
+        </div>
+
+        <!-- 限时任务 -->
+        <div class="task">
+
+            <div class="taskOne">
+                <div><img src="images/huangguan.png"></div>
+
+                <div>
+                    <span>加入超级会员</span>
+                    <span></span>
+                    <span>每月领取9元红包</span>
+                </div>
+
+                <div>
+                    <span>立即开通></span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 优惠专区 -->
+        <div class="discount">
+
+            <h1>优惠专区</h1>
+
+            <!-- 内容 -->
+            <div class="disContent">
+
+                <div class="disContentOne">
+
+                    <a href="javascript:" id="tuone">
+
+                        <img src="images/cai.jpg">
+
+                        <span class="miaosha">限时秒杀</span>
+
+                        <div class="timeone">
+                            <h2>晚餐9.9元起</h2>
+                            <div class="times">
+                                <span>17点场</span>
+                                <ul>
+                                    <li class="hours"></li>
+                                    <li>:</li>
+                                    <li class="minutes"></li>
+                                    <li>:</li>
+                                    <li class="seconds"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="javascript:" id="tutwe">
+                        <img src="images/cai.jpg">
+                        <span class="jianmian">配送减免</span>
+                        <div class="dianpu">
+                            <h2>品质店铺</h2>
+                            <span>配送费0元起</span>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div>
+                    <a href="javascript:"><img src="images/cai.jpg"></a>
+                    <a href="javascript:"><img src="images/cai.jpg"></a>
+                    <a href="javascript:"><img src="images/cai.jpg"></a>
+                    <a href="javascript:"><img src="images/cai.jpg"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 专属推荐 -->
+        <div class="recommend">
+
+            <div>
+                <span>专属推荐</span>
+                <a href="javascript:">更好推荐&nbsp;></a>
+            </div>
+
+            <div>
+
+                <a href="javascript:">
+                    <div>
+                        <img src="images/tuijietu.webp">
+                        <img src="images/01.webp">
+                    </div>
+
+                    <div>
+                        <h1>廊坊麦当劳广阳...</h1>
+                        <span>根据你下单过的店推荐</span>
+                    </div>
+                </a>
+
+                <a href="javascript:">
+                    <div>
+                        <img src="images/tuijietu.webp">
+                        <img src="images/01.webp">
+                    </div>
+
+                    <div>
+                        <h1>熊家 韩式炸鸡...</h1>
+                        <span>你附近的高收藏好店</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- 轮播图 -->
+        <div class="lunbo lunboTwe">
+            <mt-swipe>
+                <mt-swipe-item><a href="javascript:"><img src="images/lunbotu1.webp"></a></mt-swipe-item>
+                <mt-swipe-item><a href="javascript:"><img src="images/lunbotu3.webp"></a></mt-swipe-item>
+                <mt-swipe-item><a href="javascript:"><img src="images/lunbotu4.webp"></a></mt-swipe-item>
+            </mt-swipe>
+        </div>
+
+        <!-- 推荐商家 -->
+        <div class="business">
+            <!-- 标题 -->
+            <div class="title"><span>推荐商家</span></div>
+
+            <!-- 综合排序 -->
+            <div class="sort">
+                <div><a href="javascript:" ontouchend="sort();" class="sortt">综合排序<img src="images/xia.png"></a></div>
+                <div><a href="javascript:" ontouchend="juli()" class="juli">距离</a></div>
+                <div><a href="javascript:" ontouchend="soreItem()" class="sore">销量</a></div>
+                <div><a href="javascript:" class="sx" ontouchend="sx();">筛选<img src="images/shaixuan.png"></a></div>
+            </div>
+
+            <!-- 筛选框 -->
+            <div class="screen">
+
+                <div class="layer">
+
+                    <!-- 商家特色 -->
+                    <div class="characteristic">
+                        <div>
+                            <span>商家特色</span>
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li><a href="javascript:">点评高分</a></li>
+                                <li><a href="javascript:">品牌商家</a></li>
+                                <li><a href="javascript:">优选商家</a></li>
+                                <li><a href="javascript:">免费配送</a></li>
+                                <li><a href="javascript:">新商家</a></li>
+                                <li><a href="javascript:">0元起送</a></li>
+                                <li><a href="javascript:">开发票</a></li>
+                                <li><a href="javascript:">跨天预定</a></li>
+                                <li><a href="javascript:">新商家</a></li>
+                                <li><a href="javascript:">0元起送</a></li>
+                                <li><a href="javascript:">开发票</a></li>
+                                <li><a href="javascript:">跨天预定</a></li>
+                                <li><a href="javascript:">新商家</a></li>
+                                <li><a href="javascript:">0元起送</a></li>
+                                <li><a href="javascript:">开发票</a></li>
+                                <li><a href="javascript:">跨天预定</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 商家服务 -->
+                    <div class="service">
+                        <div>
+                            <span>商家服务</span>
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li><a href="javascript:">到点自取</a></li>
+                                <li><a href="javascript:">极速退款</a></li>
+                                <li><a href="javascript:">放心吃</a></li>
+                                <li><a href="javascript:">赠准时宝</a></li>
+                                <li><a href="javascript:">到点自取</a></li>
+                                <li><a href="javascript:">极速退款</a></li>
+                                <li><a href="javascript:">放心吃</a></li>
+                                <li><a href="javascript:">赠准时宝</a></li>
+                                <li><a href="javascript:">到点自取</a></li>
+                                <li><a href="javascript:">极速退款</a></li>
+                                <li><a href="javascript:">放心吃</a></li>
+                                <li><a href="javascript:">赠准时宝</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 重置完成按钮 -->
+                    <div class="btn">
+                        <button>重置</button>
+                        <button class="btntwe" ontouchend="btnn()">完成</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- 综合排序框 -->
+            <div class="zsort">
+                <ul>
+                    <li ontouchend="zsort(1)"><a href="javascript:">综合排序</a></li>
+                    <li ontouchend="zsort(2)"><a href="javascript:">速度最快</a></li>
+                    <li ontouchend="zsort(3)"><a href="javascript:">评分最高</a></li>
+                    <li ontouchend="zsort(4)"><a href="javascript:">起送价最低</a></li>
+                    <li ontouchend="zsort(5)"><a href="javascript:">配送费最低</a></li>
+                    <li ontouchend="zsort(6)"><a href="javascript:">人均高到低</a></li>
+                    <li ontouchend="zsort(7)"><a href="javascript:">人均低到高</a></li>
+                </ul>
+            </div>
+
+            <!-- 品质联盟 -->
+            <div class="union">
+                <a href="javascript:" ontouchend="pingz()" id="pingz">品质联盟</a>
+                <a href="javascript:" ontouchend="youhui()" id="youhui">满减优惠</a>
+                <a href="javascript:" ontouchend="peis()" id="peis">配送费优惠</a>
+                <a href="javascript:" ontouchend="xind()" id="xind">新店</a>
+            </div>
+
+            <!-- 商品内容列 -->
+            <div class="contentList">
+
+                <template id="det">
+                        <ul v-for = "item in soreItem" :key="item.id">
+                            <li>
+                                
+                                <div class="listLeft"><a href="javascript:"><img src="images/dianmiantu.webp"></a></div>
+                                <div class="listRight">
+                                    <div><span>金百万烧烤(浙商广场店)</span><a href="javascript:"><img src="images/xuanxiang.png"></a></div>
+                                    
+                                    <div>
+                                        <span><img src="images/xingx.png"></span>
+                                        <span>4.5</span>
+                                        <span>月售</span>
+                                        <span>{{item}}</span>
+                                    </div>
+        
+                                    <div>
+                                        <span>起送￥15 远距离配送￥4.68 <del>￥7.18</del> 43分钟 <span id="span">4.8</span>km</span>
+                                    </div>
+        
+                                    <div>
+                                        <span>“挺好开花馒头，牛肉时蔬拌饭”</span>
+                                        <span>人人爱吃</span>
+                                    </div>
+        
+                                    <div>
+                                        <a href="javascript:">30减17</a>
+                                        <a href="javascript:">45减24</a>
+                                        <a href="javascript:">60减30</a>
+                                        <a href="javascript:">80减40</a>
+                                        <a href="javascript:"><img src="images/xia.png"></a>
+                                    </div>
+                                    
+                                </div>
+                            </li>
+                        </ul>
+                </template>
+
+                
+
+                <!-- 正在加载 -->
+                <div class="weui-loadmore">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+
+            </div>
+                    
+        </div>
+
+        <!-- vip加购物车 -->
+        <div class="vip">
+
+            <div><a href="javascript:"><img src="images/vip.png"></a></div>
+
+            <div><a href="javascript:"><img src="images/gou_wu_che.png"></a></div>
+
+        </div>
+
+   
+
+        <!-- 底部 -->
+        <div class="footer">
+
+            <div>
+                <a href="javascript:" ontouchstart="footers(1);" id="one">
+                    <img src="images/waimaiche2.png">
+                    <span style="color: #2294FE">外卖</span>
+                </a>
+            </div>
+
+            <div>
+                <a href="javascript:" ontouchstart="footers(2);" id="twe">
+                    <img src="images/chaoshi1.png">
+                    <span>超市</span>
+                </a>
+            </div>
+
+            <div>
+                <a href="javascript:"ontouchstart="footers(3);" id="three">
+                    <img src="images/dingdan2.png">
+                    <span>订单</span>
+                </a>
+            </div>
+
+            <div>
+                <a href="javascript:" ontouchstart="footers(4);" id="four">
+                    <img src="images/wode2.png">
+                    <span>我的</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+
+        var app4 = new Vue({
+            el: '#app',
+
+            // 数据
+            data () {
+                return {
+                    list: 1,
+                    loading:false,
+                    items: [1996,5555,3336,2225,4620]
+                }
+            },
+
+            templat: "#det",
+
+            computed: {
+                noMore () {
+                    return this.list >= 2
+                },
+
+                // 降序
+                soreItem(){
+                    return this.items.sort(function(n,m){
+                        return n - m
+                    }).reverse();
+                }
+            },
+
+            disabled () {
+                return this.loading || this.noMore
+            },
+
+            // 调用方法的
+            methods: {
+
+                // 加载更多内容
+                loadMore () {
+                    this.loading = true
+                    setTimeout(() => {
+                    this.list += 2
+                    this.loading = false
+                    }, 2000)
+                },
+
+            }
+            
+        })
+
+    </script>
+
+</body>
+</html>
