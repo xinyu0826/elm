@@ -165,11 +165,12 @@
                             <div class="times">
                                 <span>17点场</span>
                                 <ul>
-                                    <li class="hours"></li>
+                                    <li>{{content}}</li>
+                                    <!-- <li class="hours">{{content}}</li>
                                     <li>:</li>
-                                    <li class="minutes"></li>
+                                    <li class="minutes">{{content}}</li>
                                     <li>:</li>
-                                    <li class="seconds"></li>
+                                    <li class="seconds">{{content}}</li> -->
                                 </ul>
                             </div>
                         </div>
@@ -271,22 +272,22 @@
 
                         <div>
                             <ul>
-                                <li><a href="javascript:">点评高分</a></li>
-                                <li><a href="javascript:">品牌商家</a></li>
-                                <li><a href="javascript:">优选商家</a></li>
-                                <li><a href="javascript:">免费配送</a></li>
-                                <li><a href="javascript:">新商家</a></li>
-                                <li><a href="javascript:">0元起送</a></li>
-                                <li><a href="javascript:">开发票</a></li>
-                                <li><a href="javascript:">跨天预定</a></li>
-                                <li><a href="javascript:">新商家</a></li>
-                                <li><a href="javascript:">0元起送</a></li>
-                                <li><a href="javascript:">开发票</a></li>
-                                <li><a href="javascript:">跨天预定</a></li>
-                                <li><a href="javascript:">新商家</a></li>
-                                <li><a href="javascript:">0元起送</a></li>
-                                <li><a href="javascript:">开发票</a></li>
-                                <li><a href="javascript:">跨天预定</a></li>
+                                <li ontouchend="characteristic(1)"><a href="javascript:">点评高分</a></li>
+                                <li ontouchend="characteristic(2)"><a href="javascript:">品牌商家</a></li>
+                                <li ontouchend="characteristic(3)"><a href="javascript:">优选商家</a></li>
+                                <li ontouchend="characteristic(4)"><a href="javascript:">免费配送</a></li>
+                                <li ontouchend="characteristic(5)"><a href="javascript:">新商家</a></li>
+                                <li ontouchend="characteristic(6)"><a href="javascript:">0元起送</a></li>
+                                <li ontouchend="characteristic(7)"><a href="javascript:">开发票</a></li>
+                                <li ontouchend="characteristic(8)"><a href="javascript:">跨天预定</a></li>
+                                <li ontouchend="characteristic(9)"><a href="javascript:">新商家</a></li>
+                                <li ontouchend="characteristic(10)"><a href="javascript:">0元起送</a></li>
+                                <li ontouchend="characteristic(11)"><a href="javascript:">开发票</a></li>
+                                <li ontouchend="characteristic(12)"><a href="javascript:">跨天预定</a></li>
+                                <li ontouchend="characteristic(13)"><a href="javascript:">新商家</a></li>
+                                <li ontouchend="characteristic(14)"><a href="javascript:">0元起送</a></li>
+                                <li ontouchend="characteristic(15)"><a href="javascript:">开发票</a></li>
+                                <li ontouchend="characteristic(16)"><a href="javascript:">跨天预定</a></li>
                             </ul>
                         </div>
                     </div>
@@ -299,18 +300,18 @@
 
                         <div>
                             <ul>
-                                <li><a href="javascript:">到点自取</a></li>
-                                <li><a href="javascript:">极速退款</a></li>
-                                <li><a href="javascript:">放心吃</a></li>
-                                <li><a href="javascript:">赠准时宝</a></li>
-                                <li><a href="javascript:">到点自取</a></li>
-                                <li><a href="javascript:">极速退款</a></li>
-                                <li><a href="javascript:">放心吃</a></li>
-                                <li><a href="javascript:">赠准时宝</a></li>
-                                <li><a href="javascript:">到点自取</a></li>
-                                <li><a href="javascript:">极速退款</a></li>
-                                <li><a href="javascript:">放心吃</a></li>
-                                <li><a href="javascript:">赠准时宝</a></li>
+                                <li ontouchend="service(17)"><a href="javascript:">到点自取</a></li>
+                                <li ontouchend="service(18)"><a href="javascript:">极速退款</a></li>
+                                <li ontouchend="service(19)"><a href="javascript:">放心吃</a></li>
+                                <li ontouchend="service(20)"><a href="javascript:">赠准时宝</a></li>
+                                <li ontouchend="service(21)"><a href="javascript:">到点自取</a></li>
+                                <li ontouchend="service(22)"><a href="javascript:">极速退款</a></li>
+                                <li ontouchend="service(23)"><a href="javascript:">放心吃</a></li>
+                                <li ontouchend="service(24)"><a href="javascript:">赠准时宝</a></li>
+                                <li ontouchend="service(25)"><a href="javascript:">到点自取</a></li>
+                                <li ontouchend="service(26)"><a href="javascript:">极速退款</a></li>
+                                <li ontouchend="service(27)"><a href="javascript:">放心吃</a></li>
+                                <li ontouchend="service(28)"><a href="javascript:">赠准时宝</a></li>
                             </ul>
                         </div>
                     </div>
@@ -457,8 +458,28 @@
                 return {
                     list: 1,
                     loading:false,
-                    items: [1996,5555,3336,2225,4620]
+                    items: [1996,5555,3336,2225,4620],
+                    content: ''
                 }
+            },
+
+            props:{
+                endTime:{
+                    type: String,
+                    default :''
+                },
+                endText:{
+                    type : String,
+                    default:'已结束'
+                },
+                callback : {
+                    type : Function,
+                    default :''
+                }
+            },
+
+            mounted () {
+            this.countdowm(this.endTime)
             },
 
             templat: "#det",
@@ -492,7 +513,49 @@
                     }, 2000)
                 },
 
-            }
+                countdowm(timestamp){
+                    let self = this;
+                    let timer = setInterval(function(){
+                        let nowTime = new Date();
+                        let endTime = new Date('2019-07-15 00:00:00');
+                        let t = endTime.getTime() - nowTime.getTime();
+                        if(t>0){
+                        let day = Math.floor(t/86400000);
+                        let hour=Math.floor((t/3600000)%24);
+                        let min=Math.floor((t/60000)%60);
+                        let sec=Math.floor((t/1000)%60);
+                        hour = hour < 10 ? "0" + hour : hour;
+                        min = min < 10 ? "0" + min : min;
+                        sec = sec < 10 ? "0" + sec : sec;
+                        let format = '';
+                        if(day > 0){
+                            format = `${hour}:${min}:${sec}`;
+                      
+
+                        } 
+                        if(day <= 0 && hour > 0 ){
+                            format = `${hour}:${min}:${sec}`; 
+
+                        }
+                        if(day <= 0 && hour <= 0){
+                            format =`${min}:${sec}`;
+
+                        }
+                        self.content = format;
+
+                        }else{
+                        clearInterval(timer);
+                        self.content = self.endText;
+                        self._callback();
+                        }
+                        },1000);
+                        },
+                    _callback(){
+                    if(this.callback && this.callback instanceof Function){
+                    this.callback(...this);
+                    }
+                }
+            }           
             
         })
 

@@ -216,6 +216,8 @@ function sort() {
 // 点击 隐藏综合排序框 
 function zsort(n) {
 
+    btnn()
+
     var sortt = document.querySelector('.business .sort .sortt')
     var juli = document.querySelector('.business .sort .juli')
     var sore = document.querySelector('.business .sort .sore')
@@ -487,80 +489,6 @@ $(document.body).infinite().on("infinite", function() {
 });
 
 
-
-// 倒计时
-//获取小时
-var hours = document.querySelector('.discount .disContent .disContentOne #tuone .timeone .times .hours');
-
-//获取分钟
-var minutes = document.querySelector('.discount .disContent .disContentOne #tuone .timeone .times .minutes');
-
-//获取秒数
-var seconds = document.querySelector('.discount .disContent .disContentOne #tuone .timeone .times .seconds');
-
-//封装函数
-function fun () {
-
-    //获取当前时间
-    var dates = new Date();
-
-    //获取当前时间的毫秒值
-    var a = dates.getTime();
-
-    //获取活动结束时间
-    var end = new Date('2019-07-15 00:00:00');
-
-    //获取结束时间的毫秒值
-    var b = end.getTime();
-
-    //获取活动期间的时间
-    var c = b - a;
-
-    //转换为小时
-    var h = parseInt(c / 1000 / 60 / 60);
-
-    //转换为分钟
-    var m = parseInt(c / 1000 / 60 % 60);
-
-    //转换为秒数
-    var s = parseInt(c / 1000 % 60);
-
-    //三元运算判断添加0
-    h = h < 10 ? '0' + h : h;
-    m = m < 10 ? '0' + m : m;
-    s = s < 10 ? '0' + s : s;
-
-    //添加内容
-    hours.innerText = h;
-    minutes.innerText = m;
-    seconds.innerText = s;
-    console.log(seconds)
-
-    //如果活动时间结束设置都为0,主要看活动期间的毫秒值小于或等于0就活动结束了
-    if (c <= 0) {
-        
-        hours.innerText = '00';
-        minutes.innerText = '00';
-        seconds.innerText = '00';
-
-    } 
-
-}
-
-//先调用一下，防止刷新页面时有一秒的延迟
-fun();
-
-//添加一个定时器
-setInterval( function () {
-    fun();
-    // location.reload()
-},1000);
-
-
-
-// 倒计时 end
-
-
 // 距离
 function juli() {
     var sortt = document.querySelector('.business .sort .sortt')
@@ -571,7 +499,7 @@ function juli() {
     sore.style.color = ''
     sx.style.color = ''
     sortt.style.color = ''
-    console.log('已点距离')
+    console.log('已点' + juli.innerText)
 }
 
 // 销量
@@ -584,7 +512,7 @@ function soreItem() {
     sore.style.color = '#06c'
     sx.style.color = ''
     sortt.style.color = ''
-    console.log('已点销量')
+    console.log('已点' + sore.innerText)
 }
 
 // 品质联盟
@@ -597,7 +525,7 @@ function pingz() {
     peis.style.color = ''
     xind.style.color = ''
     pingz.style.color = '#06c'
-    console.log('已点击品质联盟')
+    console.log('已点击' + pingz.innerText)
 }
 
 // 满减优惠
@@ -610,7 +538,7 @@ function youhui() {
     peis.style.color = ''
     xind.style.color = ''
     youhui.style.color = '#06c'
-    console.log('已点击满减优惠')
+    console.log('已点击' + youhui.innerText)
 }
 
 // 配送费优惠
@@ -623,7 +551,7 @@ function peis() {
     youhui.style.color = ''
     xind.style.color = ''
     peis.style.color = '#06c'
-    console.log('已点击配送费优惠')
+    console.log('已点击' + peis.innerText)
 }
 
 // 新店
@@ -636,9 +564,20 @@ function xind() {
     peis.style.color = ''
     peis.style.color = ''
     xind.style.color = '#06c'
-    console.log('已点击新店')
+    console.log('已点击' + xind.innerText)
 }
 
+
+// 商家特色
+
+function characteristic(n) {
+    console.log('已选中' + n)
+}
+
+// 商家服务
+function service(n) {
+    console.log('已选中' + n)
+}
 
 
 

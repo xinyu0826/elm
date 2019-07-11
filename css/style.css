@@ -412,19 +412,26 @@ input::placeholder {
     display: flex;
     height: 0.2rem;
     margin-top: 0rem;
+    position: relative;
 }
 
 .discount .disContent .disContentOne #tuone .timeone .times span {
     color: #EB5940;
     font-size: 0.12rem;
-    margin-left: 0.1rem;
+    position: absolute;
+    left: 0.2rem;
+
+    /* 溢出显示省略号 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
 }
 
 .discount .disContent .disContentOne #tuone .timeone .times ul {
     list-style: none;
     display: flex;
-    padding: 0 0.05rem;
-    box-sizing: border-box;
+    position: absolute;
+    right: 0.2rem;
 }
 
 .discount .disContent .disContentOne #tuone .timeone .times ul li {
@@ -434,8 +441,8 @@ input::placeholder {
     height: 0.2rem;
     line-height: 0.2rem;
     text-align: center;
-    margin-left: 0.05rem;
     font-size: 0.12rem;
+
 }
 
 .discount .disContent .disContentOne #tuone .timeone .times ul li:nth-child(2n) {
