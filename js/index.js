@@ -2,12 +2,15 @@
 // 首页
 
 window.onscroll = function () {
+
+    var vip = document.querySelector('.vip')
+    vip.style.right = '-0.5rem'  
+
     var sort = document.querySelector('.business .sort')
     var union = document.querySelector('.business .union')
-    // var contentList = document.querySelector('.business .contentList')
     var contentListone = document.querySelector('.business .contentList').offsetTop
     var sortone = document.querySelector('.business .sort').offsetTop // 元素距离浏览器顶部的距离
-    var b = document.documentElement.scrollTop; // 滚动的距离
+    var b = document.documentElement.scrollTop || document.body.scrollTop; // 滚动的距离
     var result = sortone - b
     var resultOne = contentListone - b
     // console.log(resultOne)
@@ -24,9 +27,28 @@ window.onscroll = function () {
         sort.style.top = ''
         union.style.position = ''
         union.style.top = ''
-                union.style.left = '0'
+        union.style.left = '0'
         union.style.padding = '0 0'
     }
+
+    var interval = null;// 定时器
+    if (interval == null) {
+        interval = setInterval(function() {
+            test()
+        },2000)
+    }
+
+    function test() {
+        // 判断当前滚动条距离顶部的距离和上一次的距离是否相等
+        if (document.documentElement.scrollTop || document.body.scrollTop == b) {
+            console.log('已停止滚动')
+            var vip = document.querySelector('.vip')
+            vip.style.right = '0.1rem'
+            clearInterval(interval);
+            interval = null;
+        }
+    }
+
 }
 
 
@@ -74,7 +96,7 @@ function sx() {
     
     window.onscroll = function () {
         var contentListone = document.querySelector('.business .contentList').offsetTop
-        var b = document.documentElement.scrollTop;
+        var b = document.documentElement.scrollTop || document.body.scrollTop;
         var result = contentListone - b
         // console.log(result)
 
@@ -113,7 +135,7 @@ function btnn() {
     var sort = document.querySelector('.business .sort')
     var union = document.querySelector('.business .union')
 
-    var b = document.documentElement.scrollTop;
+    var b = document.documentElement.scrollTop || document.body.scrollTop;
     var sortone = document.querySelector('.business .sort').offsetTop
     var result = sortone - b
 
@@ -134,10 +156,14 @@ function btnn() {
     }
 
     window.onscroll = function () {
+
+        var vip = document.querySelector('.vip')
+        vip.style.right = '-0.5rem'
+
         var sort = document.querySelector('.business .sort')
         var union = document.querySelector('.business .union')
 
-        var b = document.documentElement.scrollTop;
+        var b = document.documentElement.scrollTop || document.body.scrollTop;
         var sortone = document.querySelector('.business .sort').offsetTop
         var result = sortone - b
 
@@ -155,6 +181,24 @@ function btnn() {
             sort.style.top = ''
             union.style.position = ''
             union.style.top = ''
+        }
+
+        var interval = null;// 定时器
+        if (interval == null) {
+            interval = setInterval(function() {
+                test()
+            },2000)
+        }
+
+        function test() {
+            // 判断当前滚动条距离顶部的距离和上一次的距离是否相等
+            if (document.documentElement.scrollTop || document.body.scrollTop == b) {
+                console.log('已停止滚动')
+                var vip = document.querySelector('.vip')
+                vip.style.right = '0.1rem'
+                clearInterval(interval);
+                interval = null;
+            }
         }
     }
     screen.style.display = 'none'
@@ -201,7 +245,7 @@ function sort() {
     
     window.onscroll = function () {
         var contentListone = document.querySelector('.business .contentList').offsetTop
-        var b = document.documentElement.scrollTop;
+        var b = document.documentElement.scrollTop || document.body.scrollTop;
         var result = contentListone - b
         // console.log(result)
 
@@ -227,7 +271,7 @@ function zsort(n) {
     sx.style.color = ''
     sortt.style.color = ''
 
-    console.log(n)
+    // console.log(n)
     // 取消阻止body滚动  
     document.removeEventListener('touchmove', function (event) {
         event.preventDefault();
@@ -240,7 +284,7 @@ function zsort(n) {
     var sort = document.querySelector('.business .sort')
     var union = document.querySelector('.business .union')
 
-    var b = document.documentElement.scrollTop;
+    var b = document.documentElement.scrollTop || document.body.scrollTop;
     var sortone = document.querySelector('.business .sort').offsetTop
     var result = sortone - b
 
@@ -260,11 +304,17 @@ function zsort(n) {
         union.style.top = ''
     }
 
+    zsort.style.display = 'none'
+
     window.onscroll = function () {
+
+        var vip = document.querySelector('.vip')
+        vip.style.right = '-0.5rem'
+
         var sort = document.querySelector('.business .sort')
         var union = document.querySelector('.business .union')
 
-        var b = document.documentElement.scrollTop;
+        var b = document.documentElement.scrollTop || document.body.scrollTop;
         var sortone = document.querySelector('.business .sort').offsetTop
         var result = sortone - b
 
@@ -283,8 +333,25 @@ function zsort(n) {
             union.style.position = ''
             union.style.top = ''
         }
+
+        var interval = null;// 定时器
+        if (interval == null) {
+            interval = setInterval(function() {
+                test()
+            },2000)
+        }
+
+        function test() {
+            // 判断当前滚动条距离顶部的距离和上一次的距离是否相等
+            if (document.documentElement.scrollTop || document.body.scrollTop == b) {
+                console.log('已停止滚动')
+                var vip = document.querySelector('.vip')
+                vip.style.right = '0.1rem'
+                clearInterval(interval);
+                interval = null;
+            }
+        }
     }
-    zsort.style.display = 'none'
 
 }
 
@@ -485,7 +552,6 @@ $(document.body).infinite().on("infinite", function() {
         loading = false;
     }, 1000);   //模拟延迟
 
-
 });
 
 
@@ -585,7 +651,34 @@ function service(n) {
 
 
 
-// 食物列表页 
+// 订单
 
+// 点击其他显示内容
+function qita() {
+    console.log('已点击其他标签')
+    var qita = document.querySelector('.dingdan .qita')
+    qita.style.display = 'block'
+}
 
-// 食物列表页 end
+// 点击其他内容页 隐藏
+function qitacon(m) {
+    console.log('已点'+m)
+    var qita = document.querySelector('.dingdan .qita')
+    qita.style.display = 'none'
+}
+
+// 点击查看
+function chakan() {
+    var xiadan = document.querySelector('.dingdan .dingdanCon .chakan .xiadan')
+    var gengzao = document.querySelector('.dingdan .dingdanCon .chakan .gengzao')
+    xiadan.style.display = 'block'
+    gengzao.style.display = 'none'
+}
+
+// 点击去下单
+function xiadan() {
+    var xiadan = document.querySelector('.dingdan .dingdanCon .chakan .xiadan')
+    xiadan.href = 'index.html'
+}
+
+// 订单 end

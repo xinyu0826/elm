@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="keywords" content="蛋糕，冰激凌，奶油">
+    <meta name="description" content="">
+    <meta name="author" content="辛宇 2019-07-23">
+    <title>商家</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/public.js"></script>
+</head>
+<body>
+
+    <!-- 顶部背景图 -->
+    <div class="bgcolortop" >
+            <img src="images/qianchengdangao.webp">
+            <div class="layer"></div>
+    
+            <!-- 店面图 -->
+            <div class="store_img">
+                <img src="images/qianchengdandaotouxiang.webp">
+            </div>
+    
+            <!-- 店面收藏 -->
+            <div class="store_sou">
+                <img src="images/hongxin.png">
+            </div>
+    
+        </div>
+    
+        <!-- 顶部导航栏 -->
+        <div class="storeTopNav">
+            <img src="images/backbai.png" id="imgone">
+            <img src="images/baipin.png" id="imgfour">
+            <img src="images/fenxiang.png" id="imgthree">
+            <img src="images/baisesou.png" id="imgtwe">     
+        </div>
+    
+        <!-- 滑动隐藏显示的导航栏 -->
+        <div class="showNav">
+    
+            <div class="bgcolorshow">
+                <div class="bgcolorshowone"><img src="images/backhei.png"></div>
+                <div class="bgcolorshowtwe"><span><img src="images/sousuo.png"></span><input type="text" name="" id="" placeholder="想吃什么搜一搜"></div>
+                <div class="bgcolorshowthree"><img src="images/heipin.png"></div>
+            </div>
+    
+        </div>
+    
+        <!-- 店面描述 -->
+        <div class="store_description">
+            
+            <!-- 店面标题 -->
+            <div class="store_title">
+    
+                <!-- 店面名称 -->
+                <div class="store_name">
+                    <h1>千层蛋糕店（廊坊广阳区第三大街）</h1>
+                </div>
+    
+                <!-- 评价，月售 -->
+                <div class="store_pingjia">
+                    <span>评价4.6</span>
+                    <span class="shu"></span>
+                    <span>月售1133</span>
+                    <span class="shu"></span>
+                    <span>蜂鸟快送约25分钟</span>
+                </div>
+    
+                <!-- 优惠券 -->
+                <div class="store_youhui">
+                    <span class="spanone">￥6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无门槛</span>
+                    <img src="images/xiaohuangguan.png">
+                    <span class="spantwe">领取</span>
+                </div>
+    
+                <!-- 满减 -->
+                <div class="reduction">
+                    <span class="reduction_one">满减</span>
+                    <span class="reduction_twe">满20减9，满30减19，满60减28</span>
+                </div>
+            </div>
+    
+            <!-- 下面内容 -->
+            <div class="store_content" style="display: none;">
+    
+                <!-- 优惠内容 -->
+                <div class="store_youhui">
+                    <!-- 优惠顶部 -->
+                    <div class="store_youhui_top">
+                        <span class="left">优惠</span>
+                        <span class="right"><img src="images/xiaoshang.png" ontouchend="imgs()"></span>
+                    </div>
+    
+                    <!-- 优惠内容 -->
+                    <div class="store_youhui_content">
+                        <ul>
+                            <li><span>满减</span>满20减9，满30减19，满60减28</li>
+                            <li><span>会员</span>超级会员领6元无门槛红包</li>
+                            <li><span>首单</span>新用户下单立减12元(不与其他活动同享)</li>
+                            <li><span>新客</span>本店新用户立减1元</li>
+                            <li><span>满赠</span>满50元赠送清凉柠檬茶1份</li>
+                            <li><span>折扣</span>折扣商品5折起</li>
+                            <li><span>特价</span>特价商品2元起</li>
+                            <li><span>红包</span>实付5元返3元店铺专享红包</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- 服务内容 -->
+                <div class="store_fuwu">
+                    <!-- 服务标题 -->
+                    <div class="store_fuwu_title">
+                        <h1>服务</h1>
+                    </div>
+    
+                    <!-- 服务内容 -->
+                    <div class="store_fuwu_content">
+                        <ul>
+                            <li><span>食安保</span>该商户食品安全已由国泰产险承担，食品安全有保障</li>
+                            <li><span>开发票</span>该商家支持开发票，请在下单时填写好发票抬头</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- 公告 -->
+                <div class="notice">
+                    <!-- 公告标题 -->
+                    <div class="notice_title">
+                        <h1>公告</h1>
+                    </div>
+                    <!-- 公告内容 -->
+                    <div class="notice_contetn">
+                        <span>港岛记为全国连锁的品牌餐饮连锁店，真材实料，健康安全，所有菜品图片仅代表主菜，配菜已根据本地口味偏好调整，以实物为准，本店可接团餐，可开正规餐饮票，欢迎来电咨询110</span>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <!-- tab切换 -->
+            <div class="store_description_tab">
+                <ul>
+                    <li><a href="storePage.html" ontouchend="tabdiancan()" id="tabdiancan">点餐</a></li>
+                    <li><a href="evaluate.html" ontouchend="tabpingjia()" id="tabpingjia">评价</a></li>
+                    <li><a href="business.html" style="border-bottom: 0.02rem solid #06c;" ontouchend="tabshangjia()" id="tabshangjia">商家</a></li>
+                </ul>
+            </div>
+            
+            <!-- 商家内容 -->
+            <div class="business_content">
+
+                <!-- 商家信息 -->
+                <div class="business_information">
+                    <!-- 信息标题 -->
+                    <div class="information_title">
+                        <span>商家信息</span>
+                    </div>
+                    <!-- 信息图片 -->
+                    <div class="information_img">
+                        <div class="imgs_content">
+                            <img src="images/dianmian1.webp" alt="">
+                            <img src="images/dianmian2.webp" alt="">
+                            <img src="images/dianmian3.webp" alt="">
+                            <img src="images/dianmian4.webp" alt="">
+                            <img src="images/dianmian5.webp" alt="">
+                        </div>
+                    </div>
+                    <!-- 信息描述内容 -->
+                    <div class="information_content">
+                        <span>容信息描述内容信息描述内容信息描述内容信息描述内容信息描述内容信息描述内容信息描述内容信息描述内容信息描述内容</span>
+                    </div>
+                </div>
+
+                <!-- 商家中间内容 -->
+                <div class="middle_content clearfix">
+                    <ul class="clearfix">
+                        <li class="clearfix"><span id="spn">商家名称</span><span>千层蛋糕店</span></li>
+                        <li class="clearfix"><span id="spn">商家品类</span><span>千层蛋糕店</span></li>
+                        <li class="clearfix"><span id="spn">商家地址</span><span>千层蛋糕店</span></li>
+                        <li class="clearfix"><span id="spn">商家电话</span><span>18632609401<img src="images/rightjiantou.png" alt=""></span></li>
+                        <li class="clearfix"><span id="spn">营业时间</span><span>06：05-23：55</span></li>
+                    </ul>
+                </div>
+
+                <!-- 服务商家 -->
+                <div class="service_business">
+                    <!-- 标题 -->
+                    <div class="service_title">
+                        <span>商家服务</span>
+                    </div>
+                    <!-- 内容 -->
+                    <div class="service_content">
+                        <a>保</a>
+                        <span>该商户食品安全已由国泰产险承担，食品安全有保障</span>
+                    </div>
+                </div>
+
+                <!-- 营业物资 -->
+                <div class="material">
+                    <span>营业物资</span>
+                    <img src="images/rightjiantou.png" alt="">
+                </div>
+
+                <!-- 举报商家 -->
+                <div class="jubao">
+                    <span>举报商家</span>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <script src="js/jquery-1.12.4.min.js"></script>
+        <script src="js/business.js"></script>
+        <script src="js/storePage.js"></script>
+</body>
+</html>

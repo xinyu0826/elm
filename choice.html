@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="keywords" content="蛋糕">
+    <meta name="description" content="蛋糕">
+    <meta name="author" content="辛宇 2019 - 07 - 23">
+    <title>选择商品页面</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/public.js"></script>
+</head>
+<body>
+    <!-- 背面内容 -->
+    <div class="back">
+        <a id="backone" href="javascript:"><img src="images/fenxiang.png" alt=""></a>
+        <a id="backtwe" href="javascript:"><img src="images/close.png" alt=""></a>
+    </div>
+
+    <!-- 下面选项内容 -->
+    <div class="choice_content">
+        <!-- 顶部 -->
+        <div class="choice_content_top">
+            <!-- 左边部分 -->
+            <div class="choice_left">
+                <img src="images/dianmian1.webp" alt="">
+            </div>
+            <!-- 右边部分 -->
+            <div class="choice_right">
+                <!-- 标题 -->
+                <div class="choice_title">
+                    <span>千层蛋糕千层蛋糕千层蛋糕千层蛋糕千层蛋糕</span>
+                    <a href="javascript:" ontouchend="guanbi()"><img src="images/back.png" alt=""></a>
+                </div>
+                <!-- 已选 -->
+                <div class="specifications">
+                    <span>已选：规格2 / 不辣</span>
+                </div>
+                <!-- 价格 -->
+                <div class="choice_price">
+                    ￥<span>45.5</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 中间内容的规格 -->
+        <div class="guige">
+            <!-- 标题 -->
+            <div class="guige_title">
+                <span>规格</span>
+            </div>
+            <!-- 内容 -->
+            <div class="guige_content">
+                <ul>
+                    <li><a href="javascript:">规格1</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 中间内容的辣度 -->
+        <div class="hot guige">
+            <!-- 标题 -->
+            <div class="hot_title guige_title">
+                <span>辣度</span>
+            </div>
+            <!-- 内容 -->
+            <div class="hot_content guige_content">
+                <ul>
+                    <li><a href="javascript:">不辣</a></li>
+                    <li><a href="javascript:">微辣</a></li>
+                    <li><a href="javascript:">特辣</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 最底部按钮 -->
+        <div class="but">
+            <button id="btn">选好了</button>
+        </div>
+
+    </div>
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        function guanbi() {
+            alert('已点击返回')
+        }
+
+        $('.choice_content .guige .guige_content ul li a').on('touchend',function() {
+            console.log($(this).text())
+            $(this).css({'background-color':'#D3E9FE','color':'#2294FE'})
+        })
+
+        // 选好了按钮
+        $('.choice_content .but #btn').on('touchend',function () {
+            console.log('已点击选好了按钮')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+
+    <meta name="keywords" content="美食">
+    <meta name="description" content="烧烤，汉堡，家常便饭，快餐，面食等等">
+    <meta name="author" content="辛宇">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+    <script src="js/public.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+
+    
+</head>
+<body>
+
+    <div id="foodList">
+        <!-- 顶部导航栏 -->
+        <div class="listNav">
+
+            <div class="navLi">
+
+                <ul>
+                    <li><a href="javascript:">全部</a></li>
+                    <li><a href="javascript:">面食粥点</a></li>
+                    <li><a href="javascript:">简餐便当</a></li>
+                    <li><a href="javascript:">汉堡披萨</a></li>
+                    <li><a href="javascript:">简餐便当</a></li>
+                    <li><a href="javascript:">面食粥点</a></li>
+                    <li><a href="javascript:">简餐便当</a></li>
+                    <li><a href="javascript:">汉堡披萨</a></li>
+                    <li><a href="javascript:">简餐便当</a></li>
+                    <li><a href="javascript:">面食粥点</a></li>
+                    <li><a href="javascript:">简餐便当</a></li>
+                </ul>
+
+            </div>
+
+            <!-- 图标 -->
+            <div class="navXia">
+                <a href="javascript:"><img src="images/baixia.png"></a>
+            </div>
+
+        </div>
+
+        <!-- 品质联盟 -->
+        <div class="food_union">
+            <a href="javascript:" ontouchend="pingz()" id="pingz">品质联盟</a>
+            <a href="javascript:" ontouchend="youhui()" id="youhui">满减优惠</a>
+            <a href="javascript:" ontouchend="peis()" id="peis">配送费优惠</a>
+            <a href="javascript:" ontouchend="xind()" id="xind">新店</a>
+        </div>
+
+        <!-- 商品内容列 -->
+        <div class="business" style="margin-top: 1rem">
+
+            <div class="contentList" style="margin-bottom: 0">
+
+                <template id="det">
+                    <ul v-for = "item in soreItem" :key="item.id">
+                        <li>
+                            
+                            <div class="listLeft"><a href="javascript:"><img src="images/dianmiantu.webp"></a></div>
+                            <div class="listRight">
+                                <div><span>金百万烧烤(浙商广场店)</span><a href="javascript:"><img src="images/xuanxiang.png"></a></div>
+                                
+                                <div>
+                                    <span><img src="images/xingx.png"></span>
+                                    <span>4.5</span>
+                                    <span>月售</span>
+                                    <span>{{item}}</span>
+                                </div>
+
+                                <div>
+                                    <span>起送￥15 远距离配送￥4.68 <del>￥7.18</del> 43分钟 <span id="span">4.8</span>km</span>
+                                </div>
+
+                                <div>
+                                    <span>“挺好开花馒头，牛肉时蔬拌饭”</span>
+                                    <span>人人爱吃</span>
+                                </div>
+
+                                <div>
+                                    <a href="javascript:">30减17</a>
+                                    <a href="javascript:">45减24</a>
+                                    <a href="javascript:">60减30</a>
+                                    <a href="javascript:">80减40</a>
+                                    <a href="javascript:"><img src="images/xia.png"></a>
+                                </div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </template>
+
+                <!-- 正在加载 -->
+                <div class="weui-loadmore" style="bottom: -0.2rem">
+                    <i class="weui-loading"></i>
+                    <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
+    <script src="js/foodListPage.js"></script>
+    
+<script>
+
+var app4 = new Vue({
+    el: '#foodList',
+
+    // 数据
+    data () {
+        return {
+            list: 1,
+            loading:false,
+            items: [1996,5555,3336,2225,4620],
+            content: '',
+        }
+    },
+
+    templat: "#det",
+
+    computed: {
+        noMore () {
+            return this.list >= 2
+        },
+
+        // 降序
+        soreItem(){
+            return this.items.sort(function(n,m){
+                return n - m
+            }).reverse();
+        }
+    },
+
+    disabled () {
+        return this.loading || this.noMore
+    },
+
+
+    // 调用方法的
+    methods: {
+
+        // 加载更多内容
+        loadMore () {
+            this.loading = true
+            setTimeout(() => {
+            this.list += 2
+            this.loading = false
+            }, 2000)
+        },
+
+    }           
+    
+})
+
+</script>
+    
+
+</body>
+</html>

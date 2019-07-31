@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <!-- 关键字 -->
+    <meta name="keywords" content="">
+    <!-- 描述 -->
+    <meta name="description" content="">
+    <!-- 作者 -->
+    <meta name="author" content="辛宇 2019-07-16">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/public.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/jquery-1.10.1.min.js"></script>
+
+    <title>Document</title>
+</head>   
+
+<body>
+    <div id="home">
+        <!-- 顶部 -->
+        <div class="homeTop">
+            <span>我的</span>
+            <a href="javascript:"><img src="images/tishi.png"></a>
+        </div>
+
+        <!-- 用户账号和头像 -->
+        <div class="homeUserName">
+            <!-- 用户名 -->
+            <div class="userName">
+                <h1>123456789</h1>
+                <span>再忙，也要记得吃饭哟~</span>
+                <a href="javascript:"><img src="images/qiandao.png">签到领￥10红包</a>
+            </div>
+
+            <!-- 头像 -->
+            <div class="homeHeader">
+                <div id="avatar">
+                    <img src="images/QQ.jpg" alt="头像" id="filesImg">
+                    <input type="file" name="" id="file_avatar" onchange="previewImage()">
+                </div>
+            </div>
+        </div>
+
+        <!-- 超级会员 -->
+        <div class="super_membership">
+            <div class="super_membership_bgcolor">
+                <div class="super_membership_left">
+                    <img src="images/huangguan.png">
+                    <h2>超级会员</h2>
+                </div>
+                <div class="super_membership_right">
+                    <span>开通后，每月领超过<span id="numb">9</span>元红包></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 红包和钱包 -->
+        <div class="red_wallet">
+
+            <!-- 左边红包 -->
+            <div class="red_wallet_left">
+
+                <div class="red_wallet_left_l">
+                    <h2>红包</h2>
+                    <span id="sp">4</span>
+                    <span>个未使用</span>
+                </div>
+
+                <div class="red_wallet_left_r">
+                    <img src="images/hongbao.png">
+                </div>
+
+            </div>
+
+            <!-- 右边钱包 -->
+            <div class="red_wallet_left red_wallet_right">
+                <div class="red_wallet_left_l">
+                    <h2>钱包</h2>
+                    <span>金币、福利、借钱</span>
+                </div>
+
+                <div class="red_wallet_left_r">
+                    <img src="images/qianbao.png">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 列表项 -->
+        <div class="homeList">
+            <ul>
+                <li>
+                    <img src="images/shouc.png">
+                    <a href="javascript:">我的收藏<span>></span></a>
+                </li>
+                <li>
+                    <img src="images/kefu.png">
+                    <a href="javascript:">我的客服<span>></span></a>
+                </li>
+                <li>
+                    <img src="images/jiangping.png">
+                    <a href="javascript:">推荐有奖<span>得15元&nbsp;&nbsp;></span></a>
+                </li>
+                <li>
+                    <img src="images/shangwu.png">
+                    <a href="javascript:">商务合作<span>></span></a>
+                </li>
+                <li>
+                    <img src="images/shezhi.png">
+                    <a href="javascript:">设置<span>></span></a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 底部文字 -->
+        <div class="bottom_txt">
+            <span>上海拉扎斯信息科技有限公司</span>
+            <span id="rule">资质与规则</span>
+        </div>
+        
+        <!-- 底部 -->
+        <div class="footer">
+
+            <div>
+                <a href="index.html" ontouchend="footers(1);" id="one">
+                    <img src="images/waimaiche1.png">
+                    <span>外卖</span>
+                </a>
+            </div>
+
+            <div>
+                <a href="javascript:" ontouchend="footers(2);" id="twe">
+                    <img src="images/chaoshi1.png">
+                    <span>超市</span>
+                </a>
+            </div>
+
+            <div>
+                <a href="order.html"ontouchend="footers(3);" id="three">
+                    <img src="images/dingdan2.png">
+                    <span>订单</span>
+                </a>
+            </div>
+
+            <div>
+                <a href="home.html" ontouchend="footers(4);" id="four">
+                    <img src="images/wode1.png">
+                    <span style="color: #2294FE">我的</span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    
+</body>
+</html>

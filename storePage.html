@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="keywords" content="蛋糕，冰激凌，奶油">
+    <meta name="description" content="">
+    <meta name="author" content="辛宇 2019-07-16">
+    <title>点餐</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/public.js"></script>
+</head>
+<body>
+
+    <!-- 顶部背景图 -->
+    <div class="bgcolortop" >
+        <img src="images/qianchengdangao.webp">
+        <div class="layer"></div>
+
+        <!-- 店面图 -->
+        <div class="store_img">
+            <img src="images/qianchengdandaotouxiang.webp">
+        </div>
+
+        <!-- 店面收藏 -->
+        <div class="store_sou">
+            <img src="images/hongxin.png">
+        </div>
+
+    </div>
+
+    <!-- 顶部导航栏 -->
+    <div class="storeTopNav">
+        <img src="images/backbai.png" id="imgone">
+        <img src="images/baipin.png" id="imgfour">
+        <img src="images/fenxiang.png" id="imgthree">
+        <img src="images/baisesou.png" id="imgtwe">     
+    </div>
+
+    <!-- 滑动隐藏显示的导航栏 -->
+    <div class="showNav">
+
+        <div class="bgcolorshow">
+            <div class="bgcolorshowone"><img src="images/backhei.png"></div>
+            <div class="bgcolorshowtwe"><span><img src="images/sousuo.png"></span><input type="text" name="" id="" placeholder="想吃什么搜一搜"></div>
+            <div class="bgcolorshowthree"><img src="images/heipin.png"></div>
+        </div>
+
+    </div>
+
+    <!-- 店面描述 -->
+    <div class="store_description">
+        
+        <!-- 店面标题 -->
+        <div class="store_title">
+
+            <!-- 店面名称 -->
+            <div class="store_name">
+                <h1>千层蛋糕店（廊坊广阳区第三大街）</h1>
+            </div>
+
+            <!-- 评价，月售 -->
+            <div class="store_pingjia">
+                <span>评价4.6</span>
+                <span class="shu"></span>
+                <span>月售1133</span>
+                <span class="shu"></span>
+                <span>蜂鸟快送约25分钟</span>
+            </div>
+
+            <!-- 优惠券 -->
+            <div class="store_youhui">
+                <span class="spanone">￥6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无门槛</span>
+                <img src="images/xiaohuangguan.png">
+                <span class="spantwe">领取</span>
+            </div>
+
+            <!-- 满减 -->
+            <div class="reduction">
+                <span class="reduction_one">满减</span>
+                <span class="reduction_twe">满20减9，满30减19，满60减28</span>
+            </div>
+        </div>
+
+        <!-- 下面内容 -->
+        <div class="store_content" style="display: none;">
+
+            <!-- 优惠内容 -->
+            <div class="store_youhui">
+                <!-- 优惠顶部 -->
+                <div class="store_youhui_top">
+                    <span class="left">优惠</span>
+                    <span class="right"><img src="images/xiaoshang.png" ontouchend="imgs()"></span>
+                </div>
+
+                <!-- 优惠内容 -->
+                <div class="store_youhui_content">
+                    <ul>
+                        <li><span>满减</span>满20减9，满30减19，满60减28</li>
+                        <li><span>会员</span>超级会员领6元无门槛红包</li>
+                        <li><span>首单</span>新用户下单立减12元(不与其他活动同享)</li>
+                        <li><span>新客</span>本店新用户立减1元</li>
+                        <li><span>满赠</span>满50元赠送清凉柠檬茶1份</li>
+                        <li><span>折扣</span>折扣商品5折起</li>
+                        <li><span>特价</span>特价商品2元起</li>
+                        <li><span>红包</span>实付5元返3元店铺专享红包</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 服务内容 -->
+            <div class="store_fuwu">
+                <!-- 服务标题 -->
+                <div class="store_fuwu_title">
+                    <h1>服务</h1>
+                </div>
+
+                <!-- 服务内容 -->
+                <div class="store_fuwu_content">
+                    <ul>
+                        <li><span>食安保</span>该商户食品安全已由国泰产险承担，食品安全有保障</li>
+                        <li><span>开发票</span>该商家支持开发票，请在下单时填写好发票抬头</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 公告 -->
+            <div class="notice">
+                <!-- 公告标题 -->
+                <div class="notice_title">
+                    <h1>公告</h1>
+                </div>
+                <!-- 公告内容 -->
+                <div class="notice_contetn">
+                    <span>港岛记为全国连锁的品牌餐饮连锁店，真材实料，健康安全，所有菜品图片仅代表主菜，配菜已根据本地口味偏好调整，以实物为准，本店可接团餐，可开正规餐饮票，欢迎来电咨询110</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- tab切换 -->
+        <div class="store_description_tab">
+            <ul>
+                <li><a href="storePage.html" style="border-bottom: 0.02rem solid #06c;" ontouchend="tabdiancan()" id="tabdiancan">点餐</a></li>
+                <li><a href="evaluate.html" ontouchend="tabpingjia()" id="tabpingjia">评价</a></li>
+                <li><a href="business.html" ontouchend="tabshangjia()" id="tabshangjia">商家</a></li>
+            </ul>
+        </div>
+
+        <!-- 点餐内容 -->
+        <div class="order_content">
+
+            <!-- 图片 -->
+            <div class="order_content_img">
+                <img src="images/kouling.webp" alt="口令">
+            </div>
+
+            <!-- 商家推荐 -->
+            <div class="order_content_recommend">
+
+                <!-- 标题 -->
+                <div class="order_content_recommend_title">
+                    <h2>商家推荐</h2>
+                </div>
+
+                <!-- 商家内容 -->
+                <div class="order_content_recommend_content">
+                    <ul>
+                        <li><a href="javascript:">
+                            <div class="img"><img src="images/dangao1.webp" alt=""></div>
+                            <div class="title"><h5>开胃蔬菜招牌大满砂锅米线菜招牌大满砂锅米线</h5></div>
+                            <div class="yuexiao"><span>月销20</span></div>
+                            <div class="bottom">
+                                <span>￥6.8<del>￥7.6</del></span>
+                                <img src="images/tianjia.png" alt="">
+                            </div>
+                        </a></li>
+                        <li><a href="javascript:">
+                            <div class="img"><img src="images/dangao2.webp" alt=""></div>
+                            <div class="title"><h5>开胃蔬菜招牌大满砂锅米线大满砂锅米线</h5></div>
+                            <div class="yuexiao"><span>月销20</span></div>
+                            <div class="bottom">
+                                <span>￥6.8<del>￥7.6</del></span>
+                                <img src="images/tianjia.png" alt="">
+                            </div>
+                        </a></li>
+                        <li><a href="javascript:">
+                            <div class="img"><img src="images/dangao3.webp" alt=""></div>
+                            <div class="title"><h5>开胃蔬菜招牌大满砂锅米线大满砂锅米线</h5></div>
+                            <div class="yuexiao"><span>月销20</span></div>
+                            <div class="bottom">
+                                <span>￥6.8<del>￥7.6</del></span>
+                                <img src="images/tianjia.png" alt="">
+                            </div>
+                        </a></li>
+                        <li><a href="javascript:">
+                            <div class="img"><img src="images/dangao4.webp" alt=""></div>
+                            <div class="title"><h5>开胃蔬菜招牌大满砂锅米线大满砂锅米线</h5></div>
+                            <div class="yuexiao"><span>月销20</span></div>
+                            <div class="bottom">
+                                <span>￥6.8<del>￥7.6</del></span>
+                                <img src="images/tianjia.png" alt="">
+                            </div>
+                        </a></li>
+                        <li><a href="javascript:">
+                            <div class="img"><img src="images/dangao5.webp" alt=""></div>
+                            <div class="title"><h5>开胃蔬菜招牌大满砂锅米线大满砂锅米线</h5></div>
+                            <div class="yuexiao"><span>月销20</span></div>
+                            <div class="bottom">
+                                <span>￥6.8<del>￥7.6</del></span>
+                                <img src="images/tianjia.png" alt="">
+                            </div>
+                        </a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 图层 -->
+        <div class="tucheng" style="background-color: #EDEDED; width:100%; height:0.05rem;"></div>
+
+        <!-- 热销 -->
+        <div class="sell">
+
+            <!-- 左边内容 -->
+            <div class="leftcontent">
+                <ul>
+                    <li><a href="javascript:" class="active" id="rexiao" ontouchend="leftcontent(0)"><img src="images/huo.webp">热销</a></li>
+                    <li><a href="javascript:" id="youhui" ontouchend="leftcontent(1)"><img src="images/youhui.webp">优惠</a></li>
+                    <li><a href="javascript:" id="zhekou" ontouchend="leftcontent(2)">超值特惠折扣专区</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(3)">智慧凑单满减专栏</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(4)">超值特惠折扣专区</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(5)">智慧凑单满减专栏</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(6)">超值特惠折扣专区</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(7)">智慧凑单满减专栏</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(8)">超值特惠折扣专区</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(9)">智慧凑单满减专栏</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(10)">超值特惠折扣专区</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(11)">智慧凑单满减专栏</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(12)">超值特惠折扣专区</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(13)">智慧凑单满减专栏</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(14)">超值特惠折扣专区</a></li>
+                    <li><a href="javascript:" ontouchend="leftcontent(15)">智慧凑单满减专栏</a></li>
+                </ul>
+            </div>
+            
+            <!-- 右边内容 -->
+            <div class="rightcontentone">
+
+                <!-- 顶部 -->
+                <div class="top" id="top_rexiao">
+                    <h2>热销</h2>
+                    <span>大家喜欢吃，才叫真好吃。</span>
+                </div>
+
+                <!-- 商家内容 -->
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao1.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao4.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao2.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao3.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- 顶部 -->
+                <div class="top" id="top_youhui">
+                    <h2>优惠</h2>
+                    <span>大家喜欢吃，才叫真好吃。</span>
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao4.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao5.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao2.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao3.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao4.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao5.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <!-- 顶部 -->
+                <div class="top" id="top_zhekou">
+                    <h2>超值特惠折扣专区</h2>
+                    <span>大家喜欢吃，才叫真好吃。</span>
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao1.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao4.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao2.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao3.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao4.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="shangjiacontent">
+
+                    <!-- 左边图片 -->
+                    <div class="imgsleft">
+                        <img src="images/dangao5.webp" alt="">
+                    </div>
+
+                    <!-- 右边内容 -->
+                    <div class="contentright">
+                        <ul>
+                            <li class="contentrightone">韩式蛋糕</li>
+                            <li class="contentrighttwe">优质材料，浓郁滋味，新鲜配送上门新鲜配送上门新鲜配送上门</li>
+                            <li class="contentrightthree">月售10</li>
+                            <li class="contentrightfour"><span>8折</span>每单限1份优惠</li>
+                            <li class="contentrightfive">
+                                ￥<span id="sone">12.5<del>￥18</del></span>
+                                <span id="stwe">2份起售<img src="images/tianjia.png" alt=""></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 新用户下单立减20元 -->
+    <div class="newUser" style="display: none;">
+        <span>新用户下单立减20元</span>
+    </div>
+
+    <!-- 底部购物车 -->
+    <div class="footergpuwu">
+
+        <!-- 最下面 -->
+        <div class="footergpuwu_bottom">
+            <!-- 左边 -->
+            <div class="footergpuwu_bottom_left">
+                <img src="images/gou_wu_che.png" alt="">
+                <span>未选购商品</span>
+            </div>
+            <!-- 右边 -->
+            <div class="footergpuwu_bottom_btn">
+                <button>￥18起送</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 最底部按钮 -->
+    <div class="store_btn" style="display: none;">
+        <a href="javascript:" ontouchend="btn()"><img src="images/dashang.png"></a>
+    </div>
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/storePage.js"></script>
+
+</body>
+</html>

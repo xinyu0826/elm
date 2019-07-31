@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="keywords" content="蛋糕，冰激凌，奶油">
+    <meta name="description" content="">
+    <meta name="author" content="辛宇 2019-07-16">
+    <title>评价</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/public.js"></script>
+</head>
+<body>
+
+    <!-- 顶部背景图 -->
+    <div class="bgcolortop" >
+            <img src="images/qianchengdangao.webp">
+            <div class="layer"></div>
+    
+            <!-- 店面图 -->
+            <div class="store_img">
+                <img src="images/qianchengdandaotouxiang.webp">
+            </div>
+    
+            <!-- 店面收藏 -->
+            <div class="store_sou">
+                <img src="images/hongxin.png">
+            </div>
+    
+        </div>
+    
+        <!-- 顶部导航栏 -->
+        <div class="storeTopNav">
+            <img src="images/backbai.png" id="imgone">
+            <img src="images/baipin.png" id="imgfour">
+            <img src="images/fenxiang.png" id="imgthree">
+            <img src="images/baisesou.png" id="imgtwe">     
+        </div>
+    
+        <!-- 滑动隐藏显示的导航栏 -->
+        <div class="showNav">
+    
+            <div class="bgcolorshow">
+                <div class="bgcolorshowone"><img src="images/backhei.png"></div>
+                <div class="bgcolorshowtwe"><span><img src="images/sousuo.png"></span><input type="text" name="" id="" placeholder="想吃什么搜一搜"></div>
+                <div class="bgcolorshowthree"><img src="images/heipin.png"></div>
+            </div>
+    
+        </div>
+    
+        <!-- 店面描述 -->
+        <div class="store_description">
+            
+            <!-- 店面标题 -->
+            <div class="store_title">
+    
+                <!-- 店面名称 -->
+                <div class="store_name">
+                    <h1>千层蛋糕店（廊坊广阳区第三大街）</h1>
+                </div>
+    
+                <!-- 评价，月售 -->
+                <div class="store_pingjia">
+                    <span>评价4.6</span>
+                    <span class="shu"></span>
+                    <span>月售1133</span>
+                    <span class="shu"></span>
+                    <span>蜂鸟快送约25分钟</span>
+                </div>
+    
+                <!-- 优惠券 -->
+                <div class="store_youhui">
+                    <span class="spanone">￥6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无门槛</span>
+                    <img src="images/xiaohuangguan.png">
+                    <span class="spantwe">领取</span>
+                </div>
+    
+                <!-- 满减 -->
+                <div class="reduction">
+                    <span class="reduction_one">满减</span>
+                    <span class="reduction_twe">满20减9，满30减19，满60减28</span>
+                </div>
+            </div>
+    
+            <!-- 下面内容 -->
+            <div class="store_content" style="display: none;">
+    
+                <!-- 优惠内容 -->
+                <div class="store_youhui">
+                    <!-- 优惠顶部 -->
+                    <div class="store_youhui_top">
+                        <span class="left">优惠</span>
+                        <span class="right"><img src="images/xiaoshang.png" ontouchend="imgs()"></span>
+                    </div>
+    
+                    <!-- 优惠内容 -->
+                    <div class="store_youhui_content">
+                        <ul>
+                            <li><span>满减</span>满20减9，满30减19，满60减28</li>
+                            <li><span>会员</span>超级会员领6元无门槛红包</li>
+                            <li><span>首单</span>新用户下单立减12元(不与其他活动同享)</li>
+                            <li><span>新客</span>本店新用户立减1元</li>
+                            <li><span>满赠</span>满50元赠送清凉柠檬茶1份</li>
+                            <li><span>折扣</span>折扣商品5折起</li>
+                            <li><span>特价</span>特价商品2元起</li>
+                            <li><span>红包</span>实付5元返3元店铺专享红包</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- 服务内容 -->
+                <div class="store_fuwu">
+                    <!-- 服务标题 -->
+                    <div class="store_fuwu_title">
+                        <h1>服务</h1>
+                    </div>
+    
+                    <!-- 服务内容 -->
+                    <div class="store_fuwu_content">
+                        <ul>
+                            <li><span>食安保</span>该商户食品安全已由国泰产险承担，食品安全有保障</li>
+                            <li><span>开发票</span>该商家支持开发票，请在下单时填写好发票抬头</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- 公告 -->
+                <div class="notice">
+                    <!-- 公告标题 -->
+                    <div class="notice_title">
+                        <h1>公告</h1>
+                    </div>
+                    <!-- 公告内容 -->
+                    <div class="notice_contetn">
+                        <span>港岛记为全国连锁的品牌餐饮连锁店，真材实料，健康安全，所有菜品图片仅代表主菜，配菜已根据本地口味偏好调整，以实物为准，本店可接团餐，可开正规餐饮票，欢迎来电咨询110</span>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <!-- tab切换 -->
+            <div class="store_description_tab">
+                <ul>
+                    <li><a href="storePage.html" ontouchend="tabdiancan()" id="tabdiancan">点餐</a></li>
+                    <li><a href="evaluate.html" style="border-bottom: 0.02rem solid #06c;" ontouchend="tabpingjia()" id="tabpingjia">评价</a></li>
+                    <li><a href="business.html" ontouchend="tabshangjia()" id="tabshangjia">商家</a></li>
+                </ul>
+            </div>
+    
+            <!-- 评价内容 -->
+            <div class="evaluate">
+    
+                <!-- 上面部分 -->
+                <div class="evaluate_top">
+    
+                    <!-- 左边 -->
+                    <div class="evaluate_top_left">
+    
+                        <div class="ping_shu">
+                            <span id="pingfenspan">4.8</span>
+                        </div>
+    
+                        <div class="ping_xin">
+    
+                            <div class="ping_xin_top">
+                                <span>商家评分</span>
+                            </div>
+    
+                            <div class="ping_xin_xia">
+                                <img src="images/pingfen.png" id="img1">
+                                <img src="images/pingfen.png" id="img2">
+                                <img src="images/pingfen.png" id="img3">
+                                <img src="images/pingfen.png" id="img4">
+                                <img src="images/pingfen.png" id="img5">
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- 右边 -->
+                    <div class="evaluate_top_right">
+    
+                        <div class="one taste">
+                            <span>味道</span>
+                            <span id="taste_span">4.8</span>
+                        </div>
+    
+                        <div class="twe taste">
+                            <span>包装</span>
+                            <span id="taste_span">4.9</span>
+                        </div>
+    
+                        <div class="three taste">
+                            <span>配送</span>
+                            <span id="taste_span">4.8</span>
+                        </div>
+    
+                        <!-- 竖杠 -->
+                        <span class="bar"></span>
+    
+                    </div>
+    
+                </div>
+    
+                <!-- 下面部分 -->
+                <div class="evaluate_footer">
+    
+                    <!-- 顶部按钮 -->
+                    <div class="evaluate_footer_btn">
+                        <ul>
+                            <li><a href="javascript:" style="background-color: #2294FE; color: #FBFDFE;">全部&nbsp;3130</a></li>
+                            <li><a href="javascript:">最新</a></li>
+                            <li><a href="javascript:">好评&nbsp;3008</a></li>
+                            <li><a href="javascript:" style="background-color: #F4F4F4;">差评&nbsp;53</a></li>
+                            <li><a href="javascript:">有图&nbsp;170</a></li>
+                            <li><a href="javascript:">味道好&nbsp;48</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- 只看内容评价 -->
+                    <div class="evaluate_content">
+                        <span>
+                            <input type="checkbox" name="" id="" ontouchend="checkbox()">
+                            <img src="images/duihao2.png" alt="">
+                        </span>
+                        <span>只看有内容的评价</span>
+                    </div>
+    
+                    <!-- 评价的内容 -->
+                    <div class="content_pingjia">
+    
+                        <!-- 左边头像 -->
+                        <div class="head_left">
+                            <img src="images/cai.jpg" alt="">
+                        </div>
+    
+                        <!-- 右边内容 -->
+                        <div class="content_right">
+    
+                            <!-- 内容顶部 -->
+                            <div class="content_right_top">
+    
+                                <!-- 用户名 -->
+                                <div class="usernames">
+                                    <span class="usernames_left">匿名用户</span>
+                                    <span class="usernames_right"><img src="images/huangguan.png" alt="">超级会员</span>
+                                </div>
+    
+                                <!-- 时间 -->
+                                <div class="times">
+                                    <span>2019-07-08</span>
+                                </div>
+    
+                            </div>
+    
+                            <!-- 星级评分 -->
+                            <div class="xinji">
+                                <!-- 星图 -->
+                                <div class="xinji_img">
+                                    <img id="img1" src="images/pingfen.png" alt="">
+                                    <img id="img2" src="images/pingfen.png" alt="">
+                                    <img id="img3" src="images/pingfen.png" alt="">
+                                    <img id="img4" src="images/pingfen.png" alt="">
+                                    <img id="img5" src="images/pingfen.png" alt="">
+                                </div>
+    
+                                <!-- 文字 -->
+                                <div class="txt">
+                                    <span id="txt_content">满意</span>
+                                </div>
+                            </div>
+    
+                            <!-- 描述内容 -->
+                            <div class="description_content">
+                                <span>挺好的挺好的挺好的挺好的挺好的挺好的挺好的挺好的挺好的挺好的挺好的挺好的</span>
+                            </div>
+    
+                            <!-- 描述内容图片 -->
+                            <div class="description_content_img">
+                                <img src="images/dangao1.webp" alt="">
+                                <img src="images/dangao2.webp" alt="">
+                                <img src="images/dangao4.webp" alt="">
+                            </div>
+    
+                            <!-- 点赞 -->
+                            <div class="zan">
+                                <img src="images/zan1.png" alt="">
+                                <ul>
+                                    <li>蛋糕1</li>
+                                    <li>蛋糕2</li>
+                                    <li>蛋糕3</li>
+                                </ul>
+                            </div>
+    
+                            <!-- 商家回复 -->
+                            <div class="reply">
+                                <span>商家回复：谢谢您的好评！！！谢谢您的好评！！！谢谢您的好评！！！谢谢您的好评！！！谢谢您的好评！！！谢谢您的好评！！！</span>
+                                <!-- 三角形 -->
+                                <div class="sanjiao"></div>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/evaluate.js"></script>
+    <script src="js/storePage.js"></script>
+</body>
+</html>

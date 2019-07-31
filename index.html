@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -144,12 +144,12 @@
 
         </div>
 
-        <!-- 优惠专区 -->
+        <!-- 优惠专区 倒计时 -->
         <div class="discount">
 
             <h1>优惠专区</h1>
 
-            <!-- 内容 -->
+            <!-- 内容 倒计时 -->
             <div class="disContent">
 
                 <div class="disContentOne">
@@ -232,6 +232,78 @@
                     </div>
                 </a>
 
+            </div>
+
+        </div>
+
+
+        <!-- 到店自取 -->
+        <div class="taking">
+
+            <!-- 标题 -->
+            <div class="takingTitle">
+                <h2>到店自取</h2>
+                <a href="javascript:">共6家></a>
+            </div>
+
+            <!-- 到店自取内容 -->
+            <div class="takingContent">
+                <ul>
+                    <li>
+                        <a href="javascript:" class="dianone">
+                            <div class="imgs"><img src="images/dianmian1.webp"></div>
+                            <div class="biaoTi"><span>吉祥混沌（吉祥混沌）</span></div>
+                            <div class="kilometer"><img src="images/dingwei.png"><span>780m</span></div>
+                            <div class="money"><span>省￥2.5配送费</span></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:" class="dianone">
+                            <div class="imgs"><img src="images/dianmian2.webp"></div>
+                            <div class="biaoTi"><span>吉祥混沌（吉祥混沌）</span></div>
+                            <div class="kilometer"><img src="images/dingwei.png"><span>680m</span></div>
+                            <div class="money"><span>省￥2.5配送费</span></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:" class="dianone">
+                            <div class="imgs"><img src="images/dianmian3.webp"></div>
+                            <div class="biaoTi"><span>吉祥混沌（吉祥混沌）</span></div>
+                            <div class="kilometer"><img src="images/dingwei.png"><span>790m</span></div>
+                            <div class="money"><span>省￥2.5配送费</span></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:" class="dianone">
+                            <div class="imgs"><img src="images/dianmian4.webp"></div>
+                            <div class="biaoTi"><span>吉祥混沌（吉祥混沌）</span></div>
+                            <div class="kilometer"><img src="images/dingwei.png"><span>760m</span></div>
+                            <div class="money"><span>省￥2.5配送费</span></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:" class="dianone">
+                            <div class="imgs"><img src="images/dianmian5.webp"></div>
+                            <div class="biaoTi"><span>吉祥混沌（吉祥混沌）</span></div>
+                            <div class="kilometer"><img src="images/dingwei.png"><span>700m</span></div>
+                            <div class="money"><span>省￥2.5配送费</span></div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:" class="dianone">
+                            <div class="imgs"><img src="images/dianmiantu.webp"></div>
+                            <div class="biaoTi"><span>吉祥混沌（吉祥混沌）</span></div>
+                            <div class="kilometer"><img src="images/dingwei.png"><span>780m</span></div>
+                            <div class="money"><span>省￥2.5配送费</span></div>
+                        </a>
+                    </li>
+
+                </ul>
             </div>
 
         </div>
@@ -414,28 +486,28 @@
         <div class="footer">
 
             <div>
-                <a href="javascript:" ontouchstart="footers(1);" id="one">
+                <a href="index.html" ontouchend="footers(1);" id="one">
                     <img src="images/waimaiche2.png">
                     <span style="color: #2294FE">外卖</span>
                 </a>
             </div>
 
             <div>
-                <a href="javascript:" ontouchstart="footers(2);" id="twe">
+                <a href="javascript:" ontouchend="footers(2);" id="twe">
                     <img src="images/chaoshi1.png">
                     <span>超市</span>
                 </a>
             </div>
 
             <div>
-                <a href="javascript:"ontouchstart="footers(3);" id="three">
+                <a href="order.html"ontouchend="footers(3);" id="three">
                     <img src="images/dingdan2.png">
                     <span>订单</span>
                 </a>
             </div>
 
             <div>
-                <a href="javascript:" ontouchstart="footers(4);" id="four">
+                <a href="home.html" ontouchend="footers(4);" id="four">
                     <img src="images/wode2.png">
                     <span>我的</span>
                 </a>
@@ -459,7 +531,7 @@
                     list: 1,
                     loading:false,
                     items: [1996,5555,3336,2225,4620],
-                    content: ''
+                    content: '',
                 }
             },
 
@@ -479,7 +551,7 @@
             },
 
             mounted () {
-            this.countdowm(this.endTime)
+                this.countdowm(this.endTime)
             },
 
             templat: "#det",
@@ -500,6 +572,7 @@
             disabled () {
                 return this.loading || this.noMore
             },
+
 
             // 调用方法的
             methods: {
